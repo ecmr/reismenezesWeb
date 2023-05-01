@@ -1,17 +1,112 @@
 ﻿@{
-    ViewBag.Title = "Contact";
+    ViewBag.Title = "Entre em contato";
 }
-<h2>@ViewBag.Title.</h2>
-<h3>@ViewBag.Message</h3>
+<div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header" style="margin-right: 655px;">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse" title="more options">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <div class="" style="margin-top: -20px; margin-right: 150px;">
+                <img class="text-company" src="~/img/Logo.RM2.png" width="300" height="180" alt="Reis Menezes Engenharia" />
+            </div>
 
-<address>
-    One Microsoft Way<br />
-    Redmond, WA 98052-6399<br />
-    <abbr title="Phone">P:</abbr>
-    425.555.0100
-</address>
+        </div>
+        <div class="navbar-collapse collapse">
+            <ul class="nav" style="margin-top: -155px; margin-left: 550px; width: fit-content; font-size: 16px;">
+                @*navbar-nav*@
+                <li style="margin: 0px 0px 0px -20px;">
+                    <a href="https://web.whatsapp.com/send?phone=+5514999072737" class="elementor-button-link elementor-button elementor-size-xl" role="button">
+                        <span class="elementor-button-content-wrapper"><span class="elementor-button-text">14-99907-2737</span></span>
+                    </a>
+                </li>
+                <li style="margin: 0px 0px 0px -20px;">
+                    <a href="https://web.whatsapp.com/send?phone=+5511994180249" class="elementor-button-link elementor-button elementor-size-xl" role="button">
+                        <span class="elementor-button-content-wrapper"><span class="elementor-button-text">11-99418-0249</span></span>
+                    </a>
+                </li>
+                <li style="margin: 0px 0px 0px -20px;">@Html.ActionLink("Sobre nós", "About", "Home") </li>
+                <li style="margin: 0px 0px 0px -20px;">@Html.ActionLink("Nossos serviços", "services", "Home")</li>
+                <li style="margin: 0px 0px 0px -20px;">@Html.ActionLink("Contato", "Contact", "Home")</li>
+            </ul>
+        </div>
+    </div>
+</div>
 
-<address>
-    <strong>Support:</strong>   <a href="mailto:Support@example.com">Support@example.com</a><br />
-    <strong>Marketing:</strong> <a href="mailto:Marketing@example.com">Marketing@example.com</a>
-</address>
+<!-- Contact Start -->
+<div class="contact wow fadeInUp">
+    <div class="container">
+        <div class="section-header text-center">
+        </div>
+        <h2 class="contact-Chamada" style="color:black;">@ViewBag.Title</h2>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <!--<i class="flaticon-address"></i>-->
+                        <i class="flaticon-call"></i>
+                        <div class="contact-text">
+                            <h2>Whatsapp</h2>
+                            @*<p>+55 14 99907-2737</p>*@
+                        <p>
+                            <a href="https://web.whatsapp.com/send?phone=+5514999072737" class="elementor-button-link elementor-button elementor-size-xl" role="button">
+                                <span class="elementor-button-content-wrapper"><span class="elementor-button-text">+55 14 99907-2737</span></span>
+                            </a>
+                        </p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="flaticon-call"></i>
+                        <div class="contact-text">
+                            <h2>Whatsapp</h2>
+                            <p>
+                                <a href="https://web.whatsapp.com/send?phone=+5511994180249" class="elementor-button-link elementor-button elementor-size-xl" role="button">
+                                    <span class="elementor-button-content-wrapper"><span class="elementor-button-text">+55 11 99418-0249</span></span>
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="flaticon-send-mail"></i>
+                        <div class="contact-text">
+                            <h2>E-mail</h2>
+                            <p>contato@reismenezesengenharia.com.br</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="contact-form">
+                    <div id="success"></div>
+                    <form name="sentMessage" id="contactForm" novalidate="novalidate">
+                        @*<div>
+                            <h2 class="contact-Chamada">Entre em contato</h2>
+                        </div>*@
+                        <div class="control-group">
+                            <input type="text" class="form-control" id="name" placeholder="Seu nome" required="required" data-validation-required-message="Informe seu nome" />
+                            <p class="help-block text-danger"></p>
+                        </div>
+                        <div class="control-group">
+                            <input type="email" class="form-control" id="email" placeholder="Seu E-mail" required="required" data-validation-required-message="Informe seu e-mail" />
+                            <p class="help-block text-danger"></p>
+                        </div>
+                        <div class="control-group">
+                            <input type="text" class="form-control" id="subject" placeholder="Assunto" required="required" data-validation-required-message="Informe o assunto" />
+                            <p class="help-block text-danger"></p>
+                        </div>
+                        <div class="control-group">
+                            <textarea class="form-control" id="message" placeholder="Mensagem" required="required" data-validation-required-message="Informe sua mensagem"></textarea>
+                            <p class="help-block text-danger"></p>
+                        </div>
+                        <div>
+                            <button class="btn" id="sendMessageButton">Enviar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Contact End -->
